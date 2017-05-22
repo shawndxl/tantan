@@ -1,0 +1,136 @@
+.swipe_style_photo {
+  position: relative;
+  width: 100%;
+  color: #222222;
+  font-size: 1rem;
+  height: 29rem;
+}
+.swipe_style_photo li {
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border: 1px solid #999;
+  border-radius: .6rem;
+  background: #fff;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-transform: translate3d(0, 1rem, 0);
+          transform: translate3d(0, 1rem, 0);
+}
+.swipe_style_photo li img {
+  width: 100%;
+  height: 22rem;
+  border-top-left-radius: .6rem;
+  border-top-right-radius: .6rem;
+}
+.swipe_style_photo li div {
+  height: 5rem;
+  padding: 0.5rem 1rem;
+}
+.swipe_style_photo li div .name {
+  height: 2rem;
+  font-size: 1.4rem;
+}
+.swipe_style_photo li div .info {
+  height: 1.5rem;
+  opacity: .6;
+}
+.swipe_style_photo li.swipeleft {
+  -webkit-animation-name: swipeleft;
+          animation-name: swipeleft;
+}
+.swipe_style_photo li.swiperight {
+  -webkit-animation-name: swiperight;
+          animation-name: swiperight;
+}
+.swipe_style_photo li.tocenter {
+  -webkit-animation-name: tocenter;
+          animation-name: tocenter;
+  -webkit-animation-timing-function: cubic-bezier(0.17, 0.67, 0.42, 1.29);
+          animation-timing-function: cubic-bezier(0.17, 0.67, 0.42, 1.29);
+}
+.swipe_style_photo li span {
+  position: absolute;
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  top: 1rem;
+  opacity: 0;
+}
+.swipe_style_photo li span.sign_left {
+  right: 3rem;
+  background: url(/img/cross37.png) center / 50% 50% no-repeat;
+  border: 1px solid #222;
+}
+.swipe_style_photo li span.sign_right {
+  left: 3rem;
+  background: url(/img/heart-icon.png) center / 60% 60% no-repeat;
+  border: 1px solid #c81400;
+}
+.swipe_style_photo li.like .sign_left {
+  opacity: 1;
+}
+.swipe_style_photo li.unlike .sign_right {
+  opacity: 1;
+}
+.swipe_style_photo li:nth-of-type(1) {
+  z-index: 10;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+.swipe_style_photo li:nth-of-type(2) {
+  z-index: 9;
+  -webkit-transform: translate3d(0, 0.5rem, 0);
+          transform: translate3d(0, 0.5rem, 0);
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+.swipe_style_photo li:nth-of-type(3) {
+  z-index: 8;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+.swipe_style_photo li:last-child(4) {
+  z-index: 7;
+}
+@-webkit-keyframes tocenter {
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes tocenter {
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes swipeleft {
+  to {
+    -webkit-transform: translate3d(-120%, 10%, 0);
+            transform: translate3d(-120%, 10%, 0);
+  }
+}
+@keyframes swipeleft {
+  to {
+    -webkit-transform: translate3d(-120%, 10%, 0);
+            transform: translate3d(-120%, 10%, 0);
+  }
+}
+@-webkit-keyframes swiperight {
+  to {
+    -webkit-transform: translate3d(120%, 10%, 0);
+            transform: translate3d(120%, 10%, 0);
+  }
+}
+@keyframes swiperight {
+  to {
+    -webkit-transform: translate3d(120%, 10%, 0);
+            transform: translate3d(120%, 10%, 0);
+  }
+}

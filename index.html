@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>照片列表</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="format-detection" content="telephone=no"/>
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/photo.css">
+</head>
+<body>
+  <div class="container">
+    <ul class='swipe_style_photo'>
+      <script type="text/jhtmls" id="id_list_template">
+      <li class="photo_item">
+        <img src="http://dicon.ifreetalk.com/getHeadIcon.php?p=#{id}">
+        <span class="sign_left"></span>
+        <span class="sign_right"></span>
+        <div>
+          <p class="name">名字</p>
+          <p class="info">一些杂七杂八描述</p>
+        </div>
+      </li>
+      </script>
+    </ul>
+  </div>
+</body>
+
+<script src="js/layout.js?__inline"></script>
+<script src="http://s.file.ifreetalk.com/web_resource/static/base/zepto_1e77c73.js"></script>
+<script src="http://s.file.ifreetalk.com/web_resource/static/base/jhtmls_996533a.js"></script>
+<script src="js/index.js"></script>
+
+</html>

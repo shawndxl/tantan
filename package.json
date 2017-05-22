@@ -1,0 +1,12 @@
+{
+  "name": "tantan",
+  "version": "0.0.1",
+  "description": "左右滑动照片选择喜欢的人",
+  "private": true,
+  "devDependencies": {
+  },
+  "dependencies": {},
+  "scripts": {
+    "debug": "fis3 server start --type php --no-browse -p 8088 && fis3 release debug -c && fis3 release debug -wL"
+  }
+}

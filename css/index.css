@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  margin-top: 12%;
+  left: 12%;
+  width: 76%;
+}
+ul {
+  list-style: none;
+}

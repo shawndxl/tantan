@@ -1,0 +1,120 @@
+@main-color: #222;
+@font-size: 1rem;
+@total-height: 29rem;
+@img-height: 22rem;
+
+.swipe_style_photo {
+  position: relative;
+  width: 100%;
+  color: @main-color;
+  font-size: @font-size;
+  height: @total-height;
+
+  li {
+    pointer-events: none;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border: 1px solid #999;
+    border-radius: .6rem;
+    background: #fff;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    //transition: translate3d 0.1s;
+    transform: translate3d(0, 1rem, 0);
+
+    img {
+      width: 100%;
+      height: @img-height;
+      border-top-left-radius: .6rem;
+      border-top-right-radius: .6rem;
+    }
+    div {
+      height: 5rem;
+      padding: 0.5rem 1rem;
+
+      .name {
+        height: 2rem;
+        font-size: 1.4rem;
+      }
+      .info {
+        height: 1.5rem;
+        opacity: .6;
+      }
+    }
+    &.swipeleft {
+      animation-name: swipeleft;
+    }
+    &.swiperight {
+      animation-name: swiperight;
+    }
+    &.tocenter {
+      animation-name: tocenter;
+      animation-timing-function: cubic-bezier(.17, .67, .42, 1.29);
+    }
+    span {
+      position: absolute;
+      display: block;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 100%;
+      top: 1rem;
+      opacity: 0;
+
+      &.sign_left {
+        right: 3rem;
+        background: url(../img/cross37.png) center / 50% 50% no-repeat;
+        border: 1px solid #222;
+      }
+      &.sign_right {
+        left: 3rem;
+        background: url(../img/heart-icon.png) center / 60% 60% no-repeat;
+        border: 1px solid rgb(200, 20, 0);
+      }
+    }
+    &.like {
+      .sign_left {
+        opacity: 1;
+      }
+    }
+    &.unlike {
+      .sign_right {
+        opacity: 1;
+      }
+    }
+    &:nth-of-type(1) {
+      z-index: 10;
+      transform: translate3d(0, 0, 0);
+      box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.5);
+    }
+    &:nth-of-type(2) {
+      z-index: 9;
+      transform: translate3d(0, .5rem, 0);
+      box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.5);
+    }
+    &:nth-of-type(3) {
+      z-index: 8;
+      box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.5);
+    }
+    &:last-child(4) {
+      z-index: 7;
+    }
+  }
+}
+@keyframes tocenter {
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes swipeleft {
+  to {
+    transform: translate3d(-120%, 10%, 0);
+  }
+}
+@keyframes swiperight {
+  to {
+    transform: translate3d(120%, 10%, 0);
+  }
+}
